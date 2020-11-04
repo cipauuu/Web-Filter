@@ -1,0 +1,57 @@
+a {
+    color: white;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.btn {
+    border-radius: 5vw;
+    padding-right: 1.5vw;
+    padding-left: 1.5vw;
+    letter-spacing: 4px;
+}
+
+.topbar {
+    background-color: #FAF9FA;
+    border-bottom: 2px solid #F1F0F1;
+}
+
+.topbar img {
+    max-height: 50px;
+}
+
+.topbar .btn {
+    position: absolute;
+    right: 2vw;
+}
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader {
+    display: none;
+}
+
+.js #loader {
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 0;
+}
+
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(https://smallenvelop.com/wp-content/uploads/2014/08/Preloader_11.gif) center no-repeat #fff;
+}
+
+.checkbox input[type="checkbox"] {
+    opacity: 0;
+}
