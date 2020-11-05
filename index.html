@@ -12,7 +12,7 @@
     <link href="style-responsive.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 
 <body onload="typeWriter()">
@@ -23,12 +23,33 @@
     <!-- Topbar -->
     <div class="container-fluid topbar py-2 mb-3 text-center">
         <a href="index.html"><img src="img/logo.png" alt=""></a>
-        <a target="_blank" href="https://api.whatsapp.com/send?phone=6281234567890&text=Halohalohalo" class="btn btn-danger mt-2">KONTAK</a>
+        <a class="btn btn-danger mt-2 text-white" onclick="kontak()">KONTAK</a>
     </div>
     <!-- Topbar -->
 
+    <!-- Progress Bar -->
+    <div class="container mb-3">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="row mt-3 justify-content-end" id="barProgress">
+                    <div class="col-4 d-none" id="kembali">
+                        <a href="#" class="btn btn-danger btn-sm py-0 d-none" style="letter-spacing: 0;" id="kembali1">kembali</a>
+                        <a href="#" class="btn btn-danger btn-sm py-0 d-none" style="letter-spacing: 0;" id="kembali2">kembali</a>
+                    </div>
+                    <div class="col-8">
+                        <div class="text-center text-white" style="height: 100%;border-radius: 2vw;background: #E9ECEF;">
+                            <p id="progress0" class="mb-0">0 of 3</p>
+                            <div class="bg-warning progress-bar-striped d-none" id="progress" style="height: 100%;border-radius: 2vw;width: 33.33%;">1 of 3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Progress Bar -->
+
     <!-- Homepage -->
-    <div class="container">
+    <div class="container" id="homepage">
         <div class="row justify-content-center">
             <div class="col-6 align-self-center">
                 <div class="card">
@@ -45,16 +66,8 @@
                                 </div>
                             </div>
 
-                            <a href="#" class="btn btn-success mt-2 px-4 py-2"><i class="fa fa-search" aria-hidden="true" onclick="typeWriter2"></i>&nbsp;CARI</a>
+                            <a class="btn btn-success mt-2 px-4 py-2 text-white" onclick="typeWriter2()"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;CARI</a>
                         </form>
-                    </div>
-                </div>
-
-                <div class="row mt-3 justify-content-end">
-                    <div class="col-8">
-                        <div class="text-center text-white pt-1" style="height: 100%;border-radius: 2vw;background: #E9ECEF;">
-                            0 of 3
-                        </div>
                     </div>
                 </div>
             </div>
@@ -63,7 +76,7 @@
     <!-- Homepage -->
 
     <!-- Filter 1 -->
-    <div class="container">
+    <div class="container d-none" id="filter1">
         <div class="row justify-content-center">
             <div class="col-6 align-self-center">
                 <div class="card">
@@ -95,19 +108,8 @@
                                 </div>
                             </div>
 
-                            <a href="#" class="btn btn-success mt-3 px-4 py-2">LANJUT</a>
+                            <a class="btn btn-success mt-2 px-4 py-2 text-white" onclick="typeWriter3()">LANJUT</a>
                         </form>
-                    </div>
-                </div>
-
-                <div class="row mt-3">
-                    <div class="col-4">
-                        <a href="index.html" class="btn btn-danger btn-sm" style="letter-spacing: 0;">kembali</a>
-                    </div>
-                    <div class="col-8">
-                        <div style="height: 100%;border-radius: 2vw;background: #E9ECEF;">
-                            <div class="bg-warning progress-bar-striped text-center text-white pt-1" style="height: 100%;border-radius: 2vw;width: 33.33%;">1 of 3</div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -116,12 +118,12 @@
     <!-- Filter 1 -->
 
     <!-- Filter 2 -->
-    <div class="container">
+    <div class="container d-none" id="filter2">
         <div class="row justify-content-center">
             <div class="col-6 align-self-center">
                 <div class="card">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Pertanyaan Filter 2?</li>
+                        <li class="list-group-item" id="judul3"></li>
                     </ul>
                     <div class="card-footer py-4 text-center">
                         <form action="">
@@ -146,21 +148,20 @@
                                         <input type="checkbox" autocomplete="off">Filter
                                     </label>
                                 </div>
+                                <div class="col-6 checkbox">
+                                    <label for="checkbox_33" class="btn btn-primary btn-block">
+                                        <input type="checkbox" autocomplete="off">Filter
+                                    </label>
+                                </div>
+                                <div class="col-6 checkbox">
+                                    <label for="checkbox_44" class="btn btn-primary btn-block">
+                                        <input type="checkbox" autocomplete="off">Filter
+                                    </label>
+                                </div>
                             </div>
 
                             <a href="#" class="btn btn-success mt-3 px-4 py-2">KIRIM</a>
                         </form>
-                    </div>
-                </div>
-
-                <div class="row mt-3">
-                    <div class="col-4">
-                        <a href="#" class="btn btn-danger btn-sm" style="letter-spacing: 0;">kembali</a>
-                    </div>
-                    <div class="col-8">
-                        <div style="height: 100%;border-radius: 2vw;background: #E9ECEF;">
-                            <div class="bg-warning progress-bar-striped text-center text-white pt-1" style="height: 100%;border-radius: 2vw;width: 66.66%;">2 of 3</div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -169,7 +170,7 @@
     <!-- Filter 2 -->
 
     <!-- Contact -->
-    <div class="container">
+    <div class="container d-none" id="kontak1">
         <div class="row justify-content-center">
             <div class="col-6 align-self-center">
                 <form>
@@ -205,7 +206,7 @@
     <!-- Contact -->
 
     <!-- Contact 2 -->
-    <div class="container">
+    <div class="container d-none" id="kontak2">
         <div class="row justify-content-center">
             <div class="col-6 align-self-center">
                 <p>Terima kasih telah menghubungi kami, klik <a href="#" class="btn btn-sm btn-warning" style="letter-spacing: 0;">DISINI</a> untuk kembali ke beranda.</p>
@@ -229,7 +230,11 @@
 <script>
     var i = 0;
     var txt = 'Apa Permasalahanmu?';
-    var speed = 200;
+    var speed = 80;
+    var j = 0;
+    var txt2 = 'Pertanyaan Filter 1?';
+    var k = 0;
+    var txt3 = 'Pertanyaan Filter 2?';
     
     function typeWriter() {
         if (i < txt.length) {
@@ -237,20 +242,47 @@
             i++;
             setTimeout(typeWriter, speed);
         }
+        
     }
-</script>
-
-<script>
-    var i = 0;
-    var txt = 'Apa Permasalahanmu?';
-    var speed = 200;
-
     function typeWriter2() {
-        if (i < txt.length) {
-            document.getElementById("judul2").innerHTML += txt.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
+        if (j < txt.length) {
+            document.getElementById("judul2").innerHTML += txt2.charAt(j);
+            j++;
+            setTimeout(typeWriter2, speed);
         }
+
+        document.getElementById("homepage").classList.add("d-none");
+        document.getElementById("filter1").classList.remove("d-none");
+
+        document.getElementById("kembali").classList.remove("d-none");
+        document.getElementById("kembali1").classList.remove("d-none");
+
+        document.getElementById("progress0").classList.add("d-none");
+        document.getElementById("progress").classList.remove("d-none");
+    }
+    function typeWriter3() {
+        if (k < txt.length) {
+            document.getElementById("judul3").innerHTML += txt3.charAt(k);
+            k++;
+            setTimeout(typeWriter3, speed);
+        }
+
+        document.getElementById("filter1").classList.add("d-none");
+        document.getElementById("filter2").classList.remove("d-none");
+
+        document.getElementById("kembali1").classList.add("d-none");
+        document.getElementById("kembali2").classList.remove("d-none");
+
+        document.getElementById("progress").style.width = "66.66%";
+        document.getElementById("progress").innerText = "2 of 3"
+    }
+
+    function kontak() {
+        document.getElementById("barProgress").classList.add("d-none");
+        document.getElementById("homepage").classList.add("d-none");
+        document.getElementById("filter1").classList.add("d-none");
+        document.getElementById("filter2").classList.add("d-none");
+        document.getElementById("kontak1").classList.remove("d-none");
     }
 </script>
 
