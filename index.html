@@ -34,7 +34,7 @@
                 <div class="row mt-3 justify-content-end" id="barProgress">
                     <div class="col-4 d-none" id="kembali">
                         <a href="index.html" class="btn btn-danger btn-sm py-0 d-none" style="letter-spacing: 0;" id="kembali1">kembali</a>
-                        <a href="#" class="btn btn-danger btn-sm py-0 d-none" style="letter-spacing: 0;" id="kembali2">kembali</a>
+                        <a href="#" class="btn btn-danger btn-sm py-0 d-none" style="letter-spacing: 0;" id="kembali2" onclick="kembali2()">kembali</a>
                     </div>
                     <div class="col-8">
                         <div class="text-center text-white" style="height: 100%;border-radius: 2vw;background: #E9ECEF;">
@@ -60,10 +60,7 @@
                         <form action="">
                             <div class="form-group">
                                 <label for="cariMasalah" class="sr-only">Password</label>
-                                <input type="text" class="form-control is-invalid" id="cariMasalah" placeholder="Ketik masalahmu disini..." required>
-                                <div class="invalid-feedback text-left">
-                                    Kolom ini tidak boleh kosong.
-                                </div>
+                                <input type="text" class="form-control" id="cariMasalah" placeholder="Ketik masalahmu disini..." required>
                             </div>
 
                             <a class="btn btn-success mt-2 px-4 py-2 text-white" onclick="typeWriter2()"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;CARI</a>
@@ -176,29 +173,21 @@
                 <form>
                     <div class="form-group">
                         <label for="inputNama">Nama</label>
-                        <input type="text" class="form-control is-invalid" id="inputNama" placeholder="Nama Lengkap" required>
-                        <div class="invalid-feedback">
-                            Kolom Nama tidak boleh kosong.
-                        </div>
+                        <input type="text" class="form-control" id="inputNama" placeholder="Nama Lengkap" required>
                     </div>
 
                     <div class="form-group">
                         <label for="inputEmail">Email</label>
-                        <input type="email" class="form-control is-invalid" id="inputEmail" placeholder="Alamat Email" required>
-                        <div class="invalid-feedback">
-                            Kolom Email tidak boleh kosong.
-                        </div>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Alamat Email" required>
                     </div>
 
                     <div class="form-group">
                         <label for="inputPesan">Pesan</label>
-                        <textarea placeholder="Isi Pesan" class="form-control is-invalid" id="inputPesan" rows="3" required></textarea>
-                        <div class="invalid-feedback">
-                            Kolom Pesan tidak boleh kosong.
-                        </div>
+                        <textarea placeholder="Isi Pesan" class="form-control" id="inputPesan" rows="3" required></textarea>
                     </div>
-
-                    <button class="btn btn-primary" type="submit">KIRIM</button>
+                    <div class="col-12 text-center">
+                        <button class="btn btn-primary" type="submit">KIRIM</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -281,6 +270,17 @@
         document.getElementById("filter1").classList.add("d-none");
         document.getElementById("filter2").classList.add("d-none");
         document.getElementById("kontak1").classList.remove("d-none");
+    }
+
+    function kembali2() {
+        document.getElementById("filter2").classList.add("d-none");
+        document.getElementById("filter1").classList.remove("d-none");
+
+        document.getElementById("kembali2").classList.add("d-none");
+        document.getElementById("kembali1").classList.remove("d-none");
+
+        document.getElementById("progress").style.width = "33.33%";
+        document.getElementById("progress").innerText = "1 of 3"
     }
 </script>
 
