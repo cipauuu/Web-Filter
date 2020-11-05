@@ -33,7 +33,7 @@
             <div class="col-6">
                 <div class="row mt-3 justify-content-end" id="barProgress">
                     <div class="col-4 d-none" id="kembali">
-                        <a href="#" class="btn btn-danger btn-sm py-0 d-none" style="letter-spacing: 0;" id="kembali1">kembali</a>
+                        <a href="index.html" class="btn btn-danger btn-sm py-0 d-none" style="letter-spacing: 0;" id="kembali1">kembali</a>
                         <a href="#" class="btn btn-danger btn-sm py-0 d-none" style="letter-spacing: 0;" id="kembali2">kembali</a>
                     </div>
                     <div class="col-8">
@@ -228,13 +228,11 @@
 </script>
 
 <script>
-    var i = 0;
-    var txt = 'Apa Permasalahanmu?';
+    var i = 0;var j = 0;var k = 0;
     var speed = 80;
-    var j = 0;
-    var txt2 = 'Pertanyaan Filter 1?';
-    var k = 0;
-    var txt3 = 'Pertanyaan Filter 2?';
+    var txt = 'Apa Permasalahanmu?';
+    var txt2 = 'Pertanyaan Filter?';
+    var txt3 = 'Pertanyaan Filter?';
     
     function typeWriter() {
         if (i < txt.length) {
@@ -284,6 +282,23 @@
         document.getElementById("filter2").classList.add("d-none");
         document.getElementById("kontak1").classList.remove("d-none");
     }
+</script>
+
+<script>
+    $(document).on({
+    "contextmenu": function(e) {
+        console.log("ctx menu button:", e.which); 
+
+        // Stop the context menu
+        e.preventDefault();
+    },
+    "mousedown": function(e) { 
+        console.log("normal mouse down:", e.which); 
+    },
+    "mouseup": function(e) { 
+        console.log("normal mouse up:", e.which); 
+    }
+});
 </script>
 
 <script src="js/bootstrap.min.js"></script>
