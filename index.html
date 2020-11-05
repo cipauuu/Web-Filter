@@ -57,10 +57,10 @@
                         <li class="list-group-item" id="judul1"></li>
                     </ul>
                     <div class="card-footer py-4 text-center">
-                        <form action="">
+                        <form action="" name="cariMasalah">
                             <div class="form-group">
                                 <label for="cariMasalah" class="sr-only">Password</label>
-                                <input type="text" class="form-control" id="cariMasalah" placeholder="Ketik masalahmu disini..." required>
+                                <input type="text" class="form-control" id="cariMasalah" name="formMasalah" placeholder="Ketik masalahmu disini..." required>
                             </div>
 
                             <a class="btn btn-success mt-2 px-4 py-2 text-white" onclick="typeWriter2()"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;CARI</a>
@@ -232,20 +232,29 @@
         
     }
     function typeWriter2() {
-        if (j < txt.length) {
-            document.getElementById("judul2").innerHTML += txt2.charAt(j);
-            j++;
-            setTimeout(typeWriter2, speed);
+        if (document.forms['cariMasalah'].formMasalah.value === "") {
+            alert("Kolom harus diisi");
+            return false;
         }
+        else{
+            if (j < txt.length) {
+                document.getElementById("judul2").innerHTML += txt2.charAt(j);
+                j++;
+                setTimeout(typeWriter2, speed);
+            }
 
-        document.getElementById("homepage").classList.add("d-none");
-        document.getElementById("filter1").classList.remove("d-none");
+            document.getElementById("homepage").classList.add("d-none");
+            document.getElementById("filter1").classList.remove("d-none");
 
-        document.getElementById("kembali").classList.remove("d-none");
-        document.getElementById("kembali1").classList.remove("d-none");
+            document.getElementById("kembali").classList.remove("d-none");
+            document.getElementById("kembali1").classList.remove("d-none");
 
-        document.getElementById("progress0").classList.add("d-none");
-        document.getElementById("progress").classList.remove("d-none");
+            document.getElementById("progress0").classList.add("d-none");
+            document.getElementById("progress").classList.remove("d-none");
+
+            return true;
+            }
+        
     }
     function typeWriter3() {
         if (k < txt.length) {
